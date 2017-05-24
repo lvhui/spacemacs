@@ -1,0 +1,6 @@
+(configuration-layer/declare-layer 'python)
+(configuration-layer/declare-layer 'auto-completion)
+(configuration-layer/declare-layer 'better-defaults)
+(configuration-layer/declare-layer 'emacs-lisp)
+(configuration-layer/declare-layer 'markdown)
+(configuration-layer/declare-layer 'org)
