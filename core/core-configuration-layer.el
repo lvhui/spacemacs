@@ -220,9 +220,9 @@ is not set for the given SLOT."
     (eval `(oset pkg ,slot value))))
 
 (defvar configuration-layer--elpa-archives
-  '(("melpa" . "melpa.org/packages/")
-    ("org"   . "orgmode.org/elpa/")
-    ("gnu"   . "elpa.gnu.org/packages/"))
+  '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+    ("org-cn"   . "http://elpa.emacs-china.org/org/")
+    ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/"))
   ;; '(("spacelpa" . "~/.emacs.d/.cache/spacelpa/"))
   "List of ELPA archives required by Spacemacs.")
 
@@ -2179,9 +2179,9 @@ Original code from dochang at https://github.com/dochang/elpa-clone"
   "Create an ELPA repository containing all packages supported by Spacemacs."
   (configuration-layer/make-all-packages 'no-discover)
   (let (package-archive-contents
-        (package-archives '(("melpa" . "https://melpa.org/packages/")
-                            ("org"   . "http://orgmode.org/elpa/")
-                            ("gnu"   . "https://elpa.gnu.org/packages/"))))
+        (package-archives '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+                            ("org-cn"   . "http://elpa.emacs-china.org/org/")
+                            ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/"))))
     (package-refresh-contents)
     (package-read-all-archive-contents)
     (let* ((packages (configuration-layer//get-indexed-elpa-package-names))
